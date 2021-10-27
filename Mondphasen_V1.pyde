@@ -27,16 +27,3 @@ def moon():
     circle(900, 500, 30)
 
 # moond soll sich auf lunarOrbit bewegen und in Abhängigkeit der Position soll sich ein Bild und ein Text ändern.
-
-
-    
-
-    
-
-
-    
-   
-   
-    
-
-    
