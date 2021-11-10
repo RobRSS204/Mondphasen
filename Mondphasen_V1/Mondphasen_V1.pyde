@@ -1,4 +1,6 @@
 font = None
+img1 = None
+img2 = None
 
 xPos = {
         '1' : 600,
@@ -15,11 +17,15 @@ yPos = {
         }
     
 def setup():
-    global font
+    global font, img1, img2
     size(1000, 1000)
     font = createFont("Roboto-Light.ttf", 24)
+    img1 = loadImage("full_moon.jpeg")
+    img2 = loadImage("new_moon.jpeg")
     
 def draw():
+    global img
+    
     background(0)
     sun()
     lunarOrbit()
@@ -34,6 +40,9 @@ def draw():
             fill(255)
             textSize(24)
             text("Vollmond", 460, 510)
+            
+            # Vollmond Foto hinzufügen
+            image(img1, 100, 100, 500, 334)
             
         elif key == '3':
             fill(255)
@@ -54,6 +63,9 @@ def draw():
             fill(255)
             textSize(24)
             text("Neumond", 460, 510)
+            
+            # Neumond Foto hinzufügen
+            image(img2, 250, 150, 225, 225)
             
         elif key == '7':
             fill(255)
