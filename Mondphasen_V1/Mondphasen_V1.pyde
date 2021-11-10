@@ -1,6 +1,8 @@
 font = None
 img1 = None
 img2 = None
+img3 = None
+img4 = None
 
 xPos = {
         '1' : 600,
@@ -17,11 +19,13 @@ yPos = {
         }
     
 def setup():
-    global font, img1, img2
+    global font, img1, img2, img3, img4
     size(1000, 1000)
     font = createFont("Roboto-Light.ttf", 24)
-    img1 = loadImage("full_moon.jpeg")
+    img1 = loadImage("super_full_moon.jpeg")
     img2 = loadImage("new_moon.jpeg")
+    img3 = loadImage("waning_moon.jpeg")
+    img4 = loadImage("waxing_moon.jpeg")
     
 def draw():
     global img
@@ -42,7 +46,7 @@ def draw():
             text("Vollmond", 460, 510)
             
             # Vollmond Foto hinzufügen
-            image(img1, 100, 100, 500, 334)
+            image(img1, 280, 180, 192, 168)
             
         elif key == '3':
             fill(255)
@@ -54,6 +58,9 @@ def draw():
             fill(255)
             textSize(24)
             text("Abnehmender Mond", 645, 320)
+            
+             # Abnehmender Mond Foto hinzufügen
+            image(img3, 250, 170, 259, 194)
             
         elif key == '5':
             fill(125, 125, 125)
@@ -77,6 +84,9 @@ def draw():
             fill(255)
             textSize(24)
             text("Zunehmender Mond", 645, 700)
+            
+             # Zunehmender Mond Foto hinzufügen
+            image(img4, 250, 150, 200, 200)
 
 def lunarOrbit():
     stroke(255,255,255)
