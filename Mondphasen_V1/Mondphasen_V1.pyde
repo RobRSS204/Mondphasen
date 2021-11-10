@@ -64,7 +64,7 @@ def draw():
             # Beschriftung hinzufügen
             fill(255)
             textSize(24)
-            text("Abnehmender Mond", 645, 700)
+            text("Zunehmender Mond", 645, 700)
 
 def lunarOrbit():
     stroke(255,255,255)
