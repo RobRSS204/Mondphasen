@@ -95,7 +95,7 @@ def lunarOrbit():
 
 def sun():
     fill(255, 255, 0)
-    circle(-4970, 500, 10000) 
+    circle(-4890, 500, 10000) 
     
 def earth():
     noStroke()
