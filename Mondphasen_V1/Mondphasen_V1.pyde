@@ -5,17 +5,17 @@ img3 = None
 img4 = None
 
 xPos = {
-        '1' : 600,
-        '3' : 750,
-        '5' : 900,
-        '7' : 750
+        '1' : 900,
+        '2' : 750,
+        '3' : 600,
+        '4' : 750
         }
 
 yPos = {
         '1' : 500,
-        '3' : 350,
-        '5' : 500,
-        '7' : 650
+        '2' : 350,
+        '3' : 500,
+        '4' : 650
         }
     
 def setup():
@@ -35,6 +35,21 @@ def draw():
     lunarOrbit()
     earth()
     
+    # title
+    fill(255, 255, 0)
+    textSize(50)
+    text("Die vier Mondphasen", 250, 70)
+    
+    
+    # instructions
+    fill(255)
+    textSize(15)
+    text("Halte die Tasten:", 280, 460)
+    text("1 = Vollmond" , 285, 480)
+    text("2 = Abnehmender Mond" , 285, 500)
+    text("3 = Neumond", 285, 520)
+    text("4 = Zunehmender Mond", 285, 540)
+    
     if keyPressed:
         if key == '1':
             fill(255)
@@ -43,12 +58,14 @@ def draw():
             # Beschriftung hinzufügen
             fill(255)
             textSize(24)
-            text("Vollmond", 460, 510)
+            text("Vollmond:", 280, 750)
+            textSize(15)
+            text("Der sichtbare Mond wird zur komplett von der Sonne Angestrahlt", 290, 775)
             
             # Vollmond Foto hinzufügen
             image(img1, 280, 180, 192, 168)
             
-        elif key == '3':
+        elif key == '2':
             fill(255)
             arc(xPos[key], yPos[key], 30, 30, HALF_PI, PI+HALF_PI)
             fill(125, 125, 125)
@@ -57,36 +74,42 @@ def draw():
             # Beschriftung hinzufügen
             fill(255)
             textSize(24)
-            text("Abnehmender Mond", 645, 320)
+            text("Abnehmender Mond", 280, 750)
+            textSize(15)
+            text("Der sichtbare Mond wird nur auf der rechten Seite von der Sonne Angestrahlt", 290, 775)
             
              # Abnehmender Mond Foto hinzufügen
-            image(img3, 250, 170, 259, 194)
+            image(img4, 250, 150, 200, 200)
             
-        elif key == '5':
+        elif key == '3':
             fill(125, 125, 125)
             circle(xPos[key], yPos[key], 30)
             
             # Beschriftung hinzufügen
             fill(255)
             textSize(24)
-            text("Neumond", 460, 510)
+            text("Neumond", 280, 750)
+            textSize(15)
+            text("Von der Erde aus ist nur die Schattenseite des Mondes zu sehen", 290, 775)
             
             # Neumond Foto hinzufügen
             image(img2, 250, 150, 225, 225)
             
-        elif key == '7':
+        elif key == '4':
             fill(255)
-            arc(xPos[key], yPos[key], 30, 30, PI+HALF_PI, TWO_PI+HALF_PI)
-            fill(125, 125, 125)
             arc(xPos[key], yPos[key], 30, 30, HALF_PI, PI+HALF_PI)
+            fill(125, 125, 125)
+            arc(xPos[key], yPos[key], 30, 30, PI+HALF_PI, TWO_PI+HALF_PI)
             
             # Beschriftung hinzufügen
             fill(255)
             textSize(24)
-            text("Zunehmender Mond", 645, 700)
+            text("Zunehmender Mond", 280, 750)
+            textSize(15)
+            text("Der sichtbare Mond wird nur auf der linken Seite von der Sonne Angestrahlt", 290, 775)
             
              # Zunehmender Mond Foto hinzufügen
-            image(img4, 250, 150, 200, 200)
+            image(img3, 250, 170, 259, 194)
 
 def lunarOrbit():
     stroke(255,255,255)
@@ -95,7 +118,7 @@ def lunarOrbit():
 
 def sun():
     fill(255, 255, 0)
-    circle(-4890, 500, 10000) 
+    circle(-900, 500, 2000) 
     
 def earth():
     noStroke()
