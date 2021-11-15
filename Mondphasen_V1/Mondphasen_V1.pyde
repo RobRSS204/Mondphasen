@@ -53,7 +53,9 @@ def draw():
     if keyPressed:
         if key == '1':
             fill(255)
-            circle(xPos[key], yPos[key], 30)
+            arc(xPos[key], yPos[key], 30, 30, HALF_PI, PI+HALF_PI)
+            fill(125, 125, 125)
+            arc(xPos[key], yPos[key], 30, 30, PI+HALF_PI, TWO_PI+HALF_PI)
             
             # Beschriftung hinzufügen
             fill(255)
@@ -82,8 +84,10 @@ def draw():
             image(img4, 250, 150, 200, 200)
             
         elif key == '3':
+            fill(255)
+            arc(xPos[key], yPos[key], 30, 30, HALF_PI, PI+HALF_PI)
             fill(125, 125, 125)
-            circle(xPos[key], yPos[key], 30)
+            arc(xPos[key], yPos[key], 30, 30, PI+HALF_PI, TWO_PI+HALF_PI)
             
             # Beschriftung hinzufügen
             fill(255)
