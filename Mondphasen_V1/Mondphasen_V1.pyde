@@ -60,7 +60,7 @@ def draw():
             textSize(24)
             text("Vollmond:", 280, 750)
             textSize(15)
-            text("Der sichtbare Mond wird zur komplett von der Sonne Angestrahlt", 290, 775)
+            text("Der sichtbare Mond wird zur komplett von der Sonne angestrahlt.", 290, 775)
             
             # Vollmond Foto hinzufügen
             image(img1, 280, 180, 192, 168)
@@ -76,7 +76,7 @@ def draw():
             textSize(24)
             text("Abnehmender Mond", 280, 750)
             textSize(15)
-            text("Der sichtbare Mond wird nur auf der rechten Seite von der Sonne Angestrahlt", 290, 775)
+            text("Der sichtbare Mond wird nur auf der rechten Seite von der Sonne angestrahlt.", 290, 775)
             
              # Abnehmender Mond Foto hinzufügen
             image(img4, 250, 150, 200, 200)
@@ -90,7 +90,7 @@ def draw():
             textSize(24)
             text("Neumond", 280, 750)
             textSize(15)
-            text("Von der Erde aus ist nur die Schattenseite des Mondes zu sehen", 290, 775)
+            text("Von der Erde aus ist nur die Schattenseite des Mondes zu sehen.", 290, 775)
             
             # Neumond Foto hinzufügen
             image(img2, 250, 150, 225, 225)
@@ -106,7 +106,7 @@ def draw():
             textSize(24)
             text("Zunehmender Mond", 280, 750)
             textSize(15)
-            text("Der sichtbare Mond wird nur auf der linken Seite von der Sonne Angestrahlt", 290, 775)
+            text("Der sichtbare Mond wird nur auf der linken Seite von der Sonne angestrahlt.", 290, 775)
             
              # Zunehmender Mond Foto hinzufügen
             image(img3, 250, 170, 259, 194)
