@@ -19,13 +19,15 @@ yPos = {
         }
     
 def setup():
-    global font, img1, img2, img3, img4
+    global font, img1, img2, img3, img4, img5, img6
     size(1000, 1000)
     font = createFont("Roboto-Light.ttf", 24)
     img1 = loadImage("super_full_moon.jpeg")
     img2 = loadImage("new_moon.jpeg")
     img3 = loadImage("waning_moon.jpeg")
     img4 = loadImage("waxing_moon.jpeg")
+    img5 = loadImage("earth.png")
+    img6 = loadImage("sun.png")
     
 def draw():
     global img
@@ -121,12 +123,13 @@ def lunarOrbit():
     circle(750, 500, 300)  
 
 def sun():
-    fill(255, 255, 0)
-    circle(-900, 500, 2000) 
+    fill(255, 255, 50)
+    circle(-900, 500, 2000)
     
 def earth():
     noStroke()
     fill(0,0,255)
     circle(750, 500, 100)
+    image(img5, 700, 450, 100, 100)
 
 # Mond soll sich auf lunarOrbit bewegen und in Abhängigkeit der Position soll sich ein Bild und ein Text ändern.
