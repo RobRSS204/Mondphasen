@@ -3,7 +3,6 @@ img1 = None
 img2 = None
 img3 = None
 img4 = None
-img5 = None
 phase = 1
 
 xPos = {
@@ -21,17 +20,16 @@ yPos = {
         }
     
 def setup():
-    global font, img1, img2, img3, img4, img5
+    global font, img1, img2, img3, img4
     size(1000, 1000)
     font = createFont("Roboto-Light.ttf", 24)
     img1 = loadImage("super_full_moon.jpeg")
     img2 = loadImage("new_moon.jpeg")
     img3 = loadImage("waning_moon.jpeg")
     img4 = loadImage("waxing_moon.jpeg")
-    img5 = loadImage("earth.png")
-
+    
 def draw():
-    global img, phase
+    global img, xPos, yPos, phase
     
     background(0)
     sun()
@@ -42,6 +40,7 @@ def draw():
     fill(255, 255, 0)
     textSize(50)
     text("Die vier Mondphasen", 250, 70)
+    
     
     # instructions
     fill(255)
@@ -69,6 +68,7 @@ def draw():
                 # Vollmond Foto hinzufügen
                 image(img1, 280, 180, 192, 168)
                 
+            
             elif phase == 1 and keyCode == UP:
                 phase == 2
                 moon(xPos['2'], yPos['2'])
@@ -116,23 +116,23 @@ def draw():
                 
                 # Zunehmender Mond Foto hinzufügen
                 image(img3, 250, 170, 259, 194)
-
+                
 def lunarOrbit():
     stroke(255,255,255)
     fill(0)
     circle(750, 500, 300)  
 
 def sun():
-    fill(255, 255, 50)
-    circle(-900, 500, 2000)
+    fill(255, 255, 0)
+    circle(-900, 500, 2000) 
     
 def earth():
-    image(img5, 700, 450, 100, 100)
+    noStroke()
+    fill(0,0,255)
+    circle(750, 500, 100)
     
 def moon(x, y):
     fill(255)
     arc(x, y, 30, 30, HALF_PI, PI+HALF_PI)
     fill(125, 125, 125)
     arc(x, y, 30, 30, PI+HALF_PI, TWO_PI+HALF_PI)
-
-# Mond soll sich auf lunarOrbit bewegen und in Abhängigkeit der Position soll sich ein Bild und ein Text ändern.
