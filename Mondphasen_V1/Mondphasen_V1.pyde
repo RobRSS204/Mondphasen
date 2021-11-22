@@ -62,7 +62,7 @@ def draw():
                 textSize(24)
                 text("Vollmond:", 280, 750)
                 textSize(15)
-                text("Der sichtbare Mond wird zur komplett von der Sonne angestrahlt.", 290, 775)
+                text("Die der Erde zugewandte Seite des Mondes wird vollstaendig von der Sonne beleuchtet.", 290, 775)
                 fill(255, 0, 0)
                 text("Pfeil rechts = Vollmond" , 285, 480)
                 
@@ -78,7 +78,7 @@ def draw():
                 textSize(24)
                 text("Abnehmender Mond", 280, 750)
                 textSize(15)
-                text("Der sichtbare Mond wird nur auf der rechten Seite von der Sonne angestrahlt.", 290, 775)
+                text("Der sichtbare Mond wird nur auf der rechten Seite der Sonne angestrahlt.", 290, 775)
                 fill(255, 0, 0)
                 text("Pfeil oben = Abnehmender Mond" , 285, 540)
                 
@@ -110,7 +110,7 @@ def draw():
                 textSize(24)
                 text("Zunehmender Mond", 280, 750)
                 textSize(15)
-                text("Der sichtbare Mond wird nur auf der linken Seite von der Sonne angestrahlt.", 290, 775)
+                text("Der sichtbare Mond wird nur auf der linken Seite der Sonne angestrahlt.", 290, 775)
                 fill(255, 0, 0)
                 text("Pfeil unten = Zunehmender Mond" , 285, 500)
                 
