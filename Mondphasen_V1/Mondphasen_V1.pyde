@@ -19,6 +19,18 @@ yPos = {
         '3' : 500,
         '4' : 650
         }
+#Textpositionen
+#Ausrichtung der Anleitung
+x1 = 280
+x2 = x1 + 5
+y1 = 460
+y2 = y1 + 20
+y3 = y1 + 40
+y4 = y1 + 60
+y5 = y1 + 80
+
+#Position Text
+
     
 def setup():
     global font, img1, img2, img3, img4, img5
@@ -46,11 +58,11 @@ def draw():
     # instructions
     fill(255)
     textSize(15)
-    text("Halte die Tasten:", 280, 460)
-    text("Pfeil rechts = Vollmond" , 285, 480)
-    text("Pfeil unten = Zunehmender Mond", 285, 500)
-    text("Pfeil links = Neumond", 285, 520)
-    text("Pfeil oben = Abnehmender Mond" , 285, 540)
+    text("Halte die Tasten:", x1, y1)
+    text("Pfeil rechts = Vollmond" , x2, y2)
+    text("Pfeil unten = Zunehmender Mond", x2, y3)
+    text("Pfeil links = Neumond", x2, y4)
+    text("Pfeil oben = Abnehmender Mond" , x2, y5)
     
     if keyPressed:
         if keyPressed and key == CODED:
@@ -60,14 +72,14 @@ def draw():
                 # Beschriftung hinzufügen
                 fill(255)
                 textSize(24)
-                text("Vollmond:", 280, 750)
+                text("Vollmond:", x1, 750)
                 textSize(15)
                 text("Die der Erde zugewandte Seite des Mondes wird vollstaendig von der Sonne beleuchtet.", 290, 775)
                 fill(255, 0, 0)
-                text("Pfeil rechts = Vollmond" , 285, 480)
+                text("Pfeil rechts = Vollmond" , x2, y2)
                 
                 # Vollmond Foto hinzufügen
-                image(img1, 280, 180, 192, 168)
+                image(img1, x1, 180, 192, 168)
                 
             elif phase == 1 and keyCode == UP:
                 phase == 2
@@ -80,7 +92,7 @@ def draw():
                 textSize(15)
                 text("Der sichtbare Mond wird nur auf der rechten Seite der Sonne angestrahlt.", 290, 775)
                 fill(255, 0, 0)
-                text("Pfeil oben = Abnehmender Mond" , 285, 540)
+                text("Pfeil oben = Abnehmender Mond" , x2, y5)
                 
                 # Abnehmender Mond Foto hinzufügen
                 image(img4, 250, 150, 200, 200)
@@ -92,11 +104,11 @@ def draw():
                 # Beschriftung hinzufügen
                 fill(255)
                 textSize(24)
-                text("Neumond", 280, 750)
+                text("Neumond", x1, 750)
                 textSize(15)
                 text("Von der Erde aus ist nur die Schattenseite des Mondes zu sehen.", 290, 775)
                 fill(255, 0, 0)
-                text("Pfeil links = Neumond" , 285, 520)
+                text("Pfeil links = Neumond" , x2, y4)
                 
                 # Neumond Foto hinzufügen
                 image(img2, 250, 150, 225, 225)
@@ -108,11 +120,11 @@ def draw():
                 # Beschriftung hinzufügen
                 fill(255)
                 textSize(24)
-                text("Zunehmender Mond", 280, 750)
+                text("Zunehmender Mond", x1, 750)
                 textSize(15)
                 text("Der sichtbare Mond wird nur auf der linken Seite der Sonne angestrahlt.", 290, 775)
                 fill(255, 0, 0)
-                text("Pfeil unten = Zunehmender Mond" , 285, 500)
+                text("Pfeil unten = Zunehmender Mond" , x2, y3)
                 
                 # Zunehmender Mond Foto hinzufügen
                 image(img3, 250, 170, 259, 194)
