@@ -20,23 +20,31 @@ yPos = {
         '4' : 650
         }
 #Textpositionen
-#Ausrichtung der Anleitung
 x1 = 280
 x2 = x1 + 5
+x3 = x1 + 10
 y1 = 460
 y2 = y1 + 20
 y3 = y1 + 40
 y4 = y1 + 60
 y5 = y1 + 80
+y6 = 775
 
-#Position Text
+#Position Erde und abhängige Objekte
+xe = 750
+ye = 500
+
+#Position und grösse der Bilder
+xi = x1
+yi = 150
+b = 210
 
     
 def setup():
     global font, img1, img2, img3, img4, img5
     size(1000, 1000)
     font = createFont("Roboto-Light.ttf", 24)
-    img1 = loadImage("super_full_moon.jpeg")
+    img1 = loadImage("full_moon.jpeg")
     img2 = loadImage("new_moon.jpeg")
     img3 = loadImage("waning_moon.jpeg")
     img4 = loadImage("waxing_moon.jpeg")
@@ -72,14 +80,14 @@ def draw():
                 # Beschriftung hinzufügen
                 fill(255)
                 textSize(24)
-                text("Vollmond:", x1, 750)
+                text("Vollmond:", x1, y6 - 25)
                 textSize(15)
-                text("Die der Erde zugewandte Seite des Mondes wird vollstaendig von der Sonne beleuchtet.", 290, 775)
+                text("Die der Erde zugewandte Seite des Mondes wird vollstaendig von der Sonne beleuchtet.", x3, y6)
                 fill(255, 0, 0)
                 text("Pfeil rechts = Vollmond" , x2, y2)
                 
                 # Vollmond Foto hinzufügen
-                image(img1, x1, 180, 192, 168)
+                image(img1, xi, yi, b, b)
                 
             elif phase == 1 and keyCode == UP:
                 phase == 2
@@ -88,14 +96,14 @@ def draw():
                 # Beschriftung hinzufügen
                 fill(255)
                 textSize(24)
-                text("Abnehmender Mond", 280, 750)
+                text("Abnehmender Mond", x1, y6 - 25)
                 textSize(15)
-                text("Der sichtbare Mond wird nur auf der rechten Seite der Sonne angestrahlt.", 290, 775)
+                text("Der sichtbare Mond wird nur auf der rechten Seite der Sonne angestrahlt.", x3, y6)
                 fill(255, 0, 0)
                 text("Pfeil oben = Abnehmender Mond" , x2, y5)
                 
                 # Abnehmender Mond Foto hinzufügen
-                image(img4, 250, 150, 200, 200)
+                image(img4, xi, yi, b, b)
             
             elif phase == 1 and keyCode == LEFT:
                 phase == 3
@@ -104,14 +112,14 @@ def draw():
                 # Beschriftung hinzufügen
                 fill(255)
                 textSize(24)
-                text("Neumond", x1, 750)
+                text("Neumond", x1, y6 - 25)
                 textSize(15)
-                text("Von der Erde aus ist nur die Schattenseite des Mondes zu sehen.", 290, 775)
+                text("Von der Erde aus ist nur die Schattenseite des Mondes zu sehen.", x3, y6)
                 fill(255, 0, 0)
                 text("Pfeil links = Neumond" , x2, y4)
                 
                 # Neumond Foto hinzufügen
-                image(img2, 250, 150, 225, 225)
+                image(img2, xi, yi, b, b)
             
             elif phase == 1  and keyCode == DOWN:
                 phase == 4
@@ -120,26 +128,26 @@ def draw():
                 # Beschriftung hinzufügen
                 fill(255)
                 textSize(24)
-                text("Zunehmender Mond", x1, 750)
+                text("Zunehmender Mond", x1, y6 - 25)
                 textSize(15)
-                text("Der sichtbare Mond wird nur auf der linken Seite der Sonne angestrahlt.", 290, 775)
+                text("Der sichtbare Mond wird nur auf der linken Seite der Sonne angestrahlt.", x3, y6)
                 fill(255, 0, 0)
                 text("Pfeil unten = Zunehmender Mond" , x2, y3)
                 
                 # Zunehmender Mond Foto hinzufügen
-                image(img3, 250, 170, 259, 194)
+                image(img3, xi, yi, b, b)
 
 def lunarOrbit():
     stroke(255,255,255)
     fill(0)
-    circle(750, 500, 300)  
+    circle(xe, ye, 300)  
 
 def sun():
     fill(255, 255, 50)
-    circle(-900, 500, 2000)
+    circle(-900, ye, 2000)
     
 def earth():
-    image(img5, 700, 450, 100, 100)
+    image(img5, xe - 50, ye - 50, 100, 100)
     
 def moon(x, y):
     fill(255)
