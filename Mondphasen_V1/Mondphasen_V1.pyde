@@ -1,9 +1,4 @@
 font = None
-img1 = None
-img2 = None
-img3 = None
-img4 = None
-img5 = None
 phase = 1
 
 xPos = {
@@ -19,7 +14,8 @@ yPos = {
         '3' : 500,
         '4' : 650
         }
-#Textpositionen
+
+#Textpositionen durch Eingabe von x1 und y1 werden alle Textpositionen angepasst
 x1 = 280
 x2 = x1 + 5
 x3 = x1 + 10
@@ -28,7 +24,7 @@ y2 = y1 + 20
 y3 = y1 + 40
 y4 = y1 + 60
 y5 = y1 + 80
-y6 = 775
+y6 = x1 + 315
 
 #Position Erde und abhängige Objekte
 xe = 750
@@ -137,6 +133,7 @@ def draw():
                 # Zunehmender Mond Foto hinzufügen
                 image(img3, xi, yi, b, b)
 
+
 def lunarOrbit():
     stroke(255,255,255)
     fill(0)
@@ -154,5 +151,3 @@ def moon(x, y):
     arc(x, y, 30, 30, HALF_PI, PI+HALF_PI)
     fill(125, 125, 125)
     arc(x, y, 30, 30, PI+HALF_PI, TWO_PI+HALF_PI)
-
-# Mond soll sich auf lunarOrbit bewegen und in Abhängigkeit der Position soll sich ein Bild und ein Text ändern.
