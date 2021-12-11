@@ -24,7 +24,7 @@ y2 = y1 + 20
 y3 = y1 + 40
 y4 = y1 + 60
 y5 = y1 + 80
-y6 = x1 + 315
+y6 = y1 + 315
 
 #Position Erde und abhängige Objekte
 xe = 750
@@ -92,7 +92,7 @@ def draw():
                 # Beschriftung hinzufügen
                 fill(255)
                 textSize(24)
-                text("Abnehmender Mond", x1, y6 - 25)
+                text("Abnehmender Mond:", x1, y6 - 25)
                 textSize(15)
                 text("Der sichtbare Mond wird nur auf der rechten Seite der Sonne angestrahlt.", x3, y6)
                 fill(255, 0, 0)
@@ -108,7 +108,7 @@ def draw():
                 # Beschriftung hinzufügen
                 fill(255)
                 textSize(24)
-                text("Neumond", x1, y6 - 25)
+                text("Neumond:", x1, y6 - 25)
                 textSize(15)
                 text("Von der Erde aus ist nur die Schattenseite des Mondes zu sehen.", x3, y6)
                 fill(255, 0, 0)
@@ -124,7 +124,7 @@ def draw():
                 # Beschriftung hinzufügen
                 fill(255)
                 textSize(24)
-                text("Zunehmender Mond", x1, y6 - 25)
+                text("Zunehmender Mond:", x1, y6 - 25)
                 textSize(15)
                 text("Der sichtbare Mond wird nur auf der linken Seite der Sonne angestrahlt.", x3, y6)
                 fill(255, 0, 0)
